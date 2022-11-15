@@ -45,7 +45,7 @@ void PrintArray (int[,] array) {
 }
 
 int RowMinSum (int[,] array) {
-    int result = 0;
+    int result = 1;
     int min = 0;
     int sum = 0;
     for (int i = 0; i < array.GetLength(1); i++)
