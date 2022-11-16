@@ -35,8 +35,8 @@ int[,] GetArray(int rows, int columns) {
     return array;
 }
 
-void PrintArray(int[,] array) {
-    Console.WriteLine("\nПолучили матрицу:\n");
+void PrintArray(int[,] array, string message) {
+    Console.WriteLine(message);
     int row = array.GetLength(0);
     int columns = array.GetLength(1);
     for (int i = 0; i < row; i++) {
@@ -67,12 +67,10 @@ int rowsColumns = GetNumber("Введите число столбцов перв
 int columns = GetNumber("Введите число столбцов второй матрицы: ");
 
 int[,] firstArray = GetArray(rows, rowsColumns);
-PrintArray(firstArray);
+PrintArray(firstArray, "\nПервая матрица:\n");
 
 int[,] secondArray = GetArray(rowsColumns, columns);
-PrintArray(secondArray);
+PrintArray(secondArray, "\nВторая матрица:\n");
 
 int[,] resultArray = MultiplyArrays(firstArray, secondArray);
-PrintArray(resultArray);
-
-
+PrintArray(resultArray, "\nПроизведение матриц:\n");
